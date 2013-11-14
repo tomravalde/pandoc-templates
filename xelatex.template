@@ -1,0 +1,32 @@
+\documentclass[a4paper]{article}
+\usepackage{healy-tufte-style}
+
+%\input(vc)
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+\usepackage{fontspec}
+
+$if(title)$
+\title{$title$}
+$endif$
+\author{$for(author)$$author$$sep$\\$endfor$}
+\date{$for(date)$$date$$sep$\\$endfor$}
+
+
+\begin{document}  
+
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont[Mapping=tex-text]{Liberation Mono}
+\setromanfont[Mapping=tex-text]{Gentium Basic}
+
+$if(title)$
+\maketitle
+$endif$
+
+
+$body$
+
+\end{document}
