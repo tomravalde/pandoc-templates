@@ -4,6 +4,7 @@
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
+\usepackage{multirow}
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -44,6 +45,7 @@ $if(natbib)$
 $endif$
 $if(biblatex)$
 \usepackage{biblatex}
+\addbibresource{$bibliography$}
 $if(biblio-files)$
 \bibliography{$biblio-files$}
 $endif$
@@ -177,6 +179,14 @@ $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
 $endif$
+
+%$if(natbib)$
+$if(biblatex)$
+%\bibliographystyle{plainnat}
+%\bibliography{$bibliography$}
+\printbibliography{$bibliography$}
+$endif$
+
 $for(include-after)$
 $include-after$
 
