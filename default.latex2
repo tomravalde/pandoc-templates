@@ -78,6 +78,9 @@ $endif$
 $if(lhs)$
 \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
 $endif$
+
+\input vc
+
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
